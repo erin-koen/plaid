@@ -11,6 +11,9 @@ autopep8 = "*"
 requests = "*"
 selenium = "*"
 beautifulsoup4 = "*"
+lxml = "*"
+xmlschema = "*"
+pprint = "*"
 
 [requires]
 python_version = "3.7"
