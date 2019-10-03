@@ -8,12 +8,9 @@ pep8 = "*"
 autopep8 = "*"
 
 [packages]
-requests = "*"
 selenium = "*"
 beautifulsoup4 = "*"
 lxml = "*"
-xmlschema = "*"
-pprint = "*"
 
 [requires]
 python_version = "3.7"
