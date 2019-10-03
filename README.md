@@ -22,11 +22,13 @@ After testing all of the included tickers successfully, I branched out onto Yaho
 
 You've successfully unzipped the file if you're reading this text. The next step will be to install the dependencies. Navigate to the directory in your terminal and launch your favorite virtual environment. I happen to prefer pipenv. `Pipenv install` will load all the dependencies (listed in the `Pipefile`) required by the program. They're also listed in the `requirements.txt` in this directory.
 
+This program makes use of the Chrome webdriver. In order to use it with Selenium, you'll need to install it to your $path if you haven't got it there already. Instructions to do so are [here](https://chromedriver.chromium.org/getting-started).
+
 This program was built in a code editor and has been run through the terminal. 
 
 ## Usage
 
-After navigating to the ERIN_KOEN directory in your terminal, enter `python sec_scraper.py CIK_or_ticker_ofyourchoosing`. The program will run and let you know that a TSV file has been created when it's finished. The TSV file will be named `CIK_todaysdate` where CIK is the ticker or number you entered. 
+After navigating to the ERIN_KOEN directory in your terminal, enter `python generate_tsv_from_13f.py CIK_or_ticker_ofyourchoosing`. The program will run and let you know that a TSV file has been created when it's finished. The TSV file will be named `CIK_todaysdate` where CIK is the ticker or number you entered. 
 
 ## Maintainers
 
