@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 
 
 def generate_tsv_from_13f(cik):
-    identifier_string = cik if type(cik) is 'string' else str(cik)
+
     today = datetime.datetime.now()
     modified_today = f'{today.year}_{today.month}_{today.day}'
 
@@ -22,14 +22,14 @@ def generate_tsv_from_13f(cik):
 
     # interpolate search URL
     driver.get(
-        f'https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={identifier_string}&type=13f')
+        f'https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={cik}&type=13f')
 
     try:
         ele = driver.find_element_by_xpath(
             "//a[@id='documentsbutton']").click()
 
     except NoSuchElementException as ex:
-        print("That's not a valid mutual fund ticker. It may be either an ETF or a single name equity symbol.")
+        print("That entity does not file a form 13F. They likely file a form N-Q, the code for which is in progress.")
         return
 
     # find the first 13f docs button and click it
